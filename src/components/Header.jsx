@@ -1,15 +1,13 @@
-import logoImg from '../assets/logo.jpg';
-
-export default function Header() {
+export default function Header({ children }) {
   return (
-    <header id="main-header">
-      <div id="title">
-        <img src={logoImg} alt="A restaurant" />
-        <h1>ReactFood</h1>
-      </div>
-      <nav>
-        <button>Cart (0)</button>
-      </nav>
-    </header>
+    <>
+      <div id="main-header-loading"></div>
+      <header id="main-header">
+        <div id="header-title">
+          <h1>React Events</h1>
+        </div>
+        <nav>{children}</nav>
+      </header>
+    </>
   );
 }
